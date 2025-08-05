@@ -174,7 +174,7 @@ public class GuestPageController implements Initializable {
 
             if (isUpdated) {
                 resetPage();
-                new Alert(Alert.AlertType.INFORMATION, "Customer updated successfully.").show();
+                new Alert(Alert.AlertType.INFORMATION, "Guest updated successfully.").show();
             } else {
                 new Alert(Alert.AlertType.ERROR, "Fail to update customer.").show();
             }
@@ -202,13 +202,13 @@ public class GuestPageController implements Initializable {
 
                 if (isDeleted) {
                     resetPage();
-                    new Alert(Alert.AlertType.INFORMATION, "Customer deleted successfully.").show();
+                    new Alert(Alert.AlertType.INFORMATION, "Guest deleted successfully.").show();
                 } else {
-                    new Alert(Alert.AlertType.ERROR, "Fail to delete customer.").show();
+                    new Alert(Alert.AlertType.ERROR, "Fail to delete Guest.").show();
                 }
             } catch (Exception e) {
                 e.printStackTrace();
-                new Alert(Alert.AlertType.ERROR, "Fail to delete customer.").show();
+                new Alert(Alert.AlertType.ERROR, "Fail to delete Guest.").show();
             }
         }
     }
