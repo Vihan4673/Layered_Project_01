@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="999.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.project_01.Controller.HomepageController">
+   <content>
+      <AnchorPane fx:id="mainPane" style="-fx-background-color: #F0F2F5;">
+         <children>
+            <AnchorPane prefHeight="151.0" style="-fx-background-color: #1A237E;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label layoutX="145.0" layoutY="23.0" text="WIMAL VILLA" textFill="#FFC107">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mainDate" text="June 04, 2025" textFill="#E8EAF6" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="58.0">
+                     <font>
+                        <Font name="System Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="110.0" fitWidth="114.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/Adobe%20Express%20-%20file.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="154.0" layoutY="85.0" text="Hello, Admin! Ready to Elevate the Guest Experience?" textFill="#E8EAF6">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+
+            <HBox alignment="CENTER" layoutY="200.0" spacing="30.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0">
+               <children>
+                  <AnchorPane HBox.hgrow="ALWAYS" prefHeight="139.0" style="-fx-background-color: linear-gradient(to right, #66BB6A, #4CAF50); -fx-background-radius: 15;">
+                     <children>
+                        <Label layoutX="20.0" layoutY="15.0" text="Total Revenue" textFill="WHITE">
+                           <font><Font name="System Bold" size="20.0" /></font>
+                        </Label>
+                        <Label fx:id="totalRevenue" layoutX="20.0" layoutY="60.0" text="Rs. 1,500,000" textFill="WHITE">
+                           <font><Font name="System Bold" size="32.0" /></font>
+                        </Label>
+                     </children>
+                     <effect><DropShadow color="#00000033" /></effect>
+                  </AnchorPane>
+                  <AnchorPane HBox.hgrow="ALWAYS" prefHeight="96.0" style="-fx-background-color: linear-gradient(to right, #42A5F5, #2196F3); -fx-background-radius: 15;">
+                     <children>
+                        <Label layoutX="20.0" layoutY="15.0" text="Total Bookings" textFill="WHITE">
+                           <font><Font name="System Bold" size="20.0" /></font>
+                        </Label>
+                        <Label fx:id="bookingCount" layoutX="20.0" layoutY="60.0" text="80" textFill="WHITE">
+                           <font><Font name="System Bold" size="32.0" /></font>
+                        </Label>
+                     </children>
+                     <effect><DropShadow color="#00000033" /></effect>
+                  </AnchorPane>
+                  <AnchorPane HBox.hgrow="ALWAYS" prefHeight="150.0" style="-fx-background-color: linear-gradient(to right, #FFA726, #FF9800); -fx-background-radius: 15;">
+                     <children>
+                        <Label layoutX="20.0" layoutY="15.0" text="Total Room Price" textFill="WHITE">
+                           <font><Font name="System Bold" size="20.0" /></font>
+                        </Label>
+                        <Label fx:id="totalRoomPrice" layoutX="20.0" layoutY="60.0" text="Rs. 1,250,000" textFill="WHITE">
+                           <font><Font name="System Bold" size="32.0" /></font>
+                        </Label>
+                     </children>
+                     <effect><DropShadow color="#00000033" /></effect>
+                  </AnchorPane>
+                  <AnchorPane HBox.hgrow="ALWAYS" prefHeight="150.0" style="-fx-background-color: linear-gradient(to right, #EC407A, #E91E63); -fx-background-radius: 15;">
+                     <children>
+                        <Label layoutX="20.0" layoutY="15.0" text="F&amp;B Revenue" textFill="WHITE">
+                           <font><Font name="System Bold" size="20.0" /></font>
+                        </Label>
+                        <Label fx:id="totalFnbRevenue" layoutX="20.0" layoutY="60.0" text="Rs. 250,000" textFill="WHITE">
+                           <font><Font name="System Bold" size="32.0" /></font>
+                        </Label>
+                     </children>
+                     <effect><DropShadow color="#00000033" /></effect>
+                  </AnchorPane>
+               </children>
+            </HBox>
+
+            <HBox alignment="TOP_CENTER" layoutY="400.0" spacing="40.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0">
+               <children>
+                  <AnchorPane HBox.hgrow="ALWAYS" prefHeight="653.0" style="-fx-background-color: WHITE; -fx-background-radius: 15;">
+                     <effect><DropShadow color="#a19e9e" /></effect>
+                     <children>
+                        <Label layoutX="25.0" layoutY="20.0" text="Monthly Revenue Trends" textFill="#2D3E50">
+                           <font><Font name="System Bold" size="24.0" /></font>
+                        </Label>
+                        <ComboBox fx:id="revenueFilterCombo" prefHeight="35.0" prefWidth="240.0" promptText="Select Year" style="-fx-background-color: #E0E0E0; -fx-background-radius: 5;" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+                        <LineChart fx:id="monthlyRevenueChart" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="75.0">
+                           <xAxis><CategoryAxis label="Month" side="BOTTOM" /></xAxis>
+                           <yAxis><NumberAxis label="Revenue (Rs.)" side="LEFT" /></yAxis>
+                        </LineChart>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </AnchorPane>
+                  <AnchorPane HBox.hgrow="ALWAYS" prefHeight="660.0" style="-fx-background-color: WHITE; -fx-background-radius: 15;">
+                     <effect><DropShadow color="#a19e9e" /></effect>
+                     <children>
+                        <Label layoutX="25.0" layoutY="20.0" text="Most Sold F&amp;B Items" textFill="#2D3E50">
+                           <font><Font name="System Bold" size="24.0" /></font>
+                        </Label>
+                        <BarChart fx:id="fnbSalesChart" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="75.0">
+                           <xAxis><CategoryAxis label="F&amp;B Item" side="BOTTOM" /></xAxis>
+                           <yAxis><NumberAxis label="Quantity Sold" side="LEFT" /></yAxis>
+                        </BarChart>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
